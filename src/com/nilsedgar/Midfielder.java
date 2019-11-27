@@ -1,4 +1,4 @@
 package com.nilsedgar;
 
-public class Midfielder {
+public class Midfielder extends Player {
 }

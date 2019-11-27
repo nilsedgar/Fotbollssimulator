@@ -1,4 +1,4 @@
 package com.nilsedgar;
 
-public class Defender {
+public class Defender extends Player {
 }
