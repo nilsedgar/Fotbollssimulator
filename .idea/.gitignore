@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 # Default ignored files
 /workspace.xml
+=======
+.idea/
+out/
+>>>>>>> master
