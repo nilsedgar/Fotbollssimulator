@@ -42,7 +42,7 @@ public class FootballSimulator {
         int gameTime = 0;
 
         while(gameTime < 90){
-            
+
         }
 
     }
