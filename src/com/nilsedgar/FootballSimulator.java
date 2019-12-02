@@ -26,7 +26,7 @@ public class FootballSimulator {
                 case 1:
                     break;
                 case 2:
-                    footballSim();
+                    match();
                     break;
                 case 3:
                     break;
@@ -38,7 +38,7 @@ public class FootballSimulator {
         }
     }
 
-    public void footballSim(){
+    public void match(){
         int gameTime = 0;
 
         while(gameTime < 90){

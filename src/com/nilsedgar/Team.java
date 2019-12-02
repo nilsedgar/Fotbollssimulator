@@ -9,6 +9,7 @@ public class Team {
 
     ArrayList<Player> players = new ArrayList<>();
 
+
     public Team(String name) {
         this.name = name;
     }
