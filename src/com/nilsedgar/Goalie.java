@@ -7,6 +7,6 @@ public class Goalie extends Player {
     }
 
     public void playerAction(){
-
+        System.out.println("The Goalie passes the ball to the defender.");
     }
 }

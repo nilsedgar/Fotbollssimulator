@@ -7,7 +7,7 @@ public class Defender extends Player {
     }
 
     public void playerAction(){
-
+        System.out.println("The defender passes the ball to the midfielder.");
     }
 
 }

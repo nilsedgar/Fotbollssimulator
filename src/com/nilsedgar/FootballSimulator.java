@@ -39,12 +39,29 @@ public class FootballSimulator {
     }
 
     public void match(){
+
+        Goalie goalie = new Goalie("goalie", 100);
+        Defender defender = new Defender("defender", 100);
+        Midfielder midfielder = new Midfielder("Mid", 100);
+        Forward forward = new Forward("Forward", 100);
         int gameTime = 0;
 
-        while(gameTime < 90){
+            while(gameTime < 90){
+            goalie.playerAction();
+            gameTime++;
+            defender.playerAction();
+            gameTime++;
+            midfielder.playerAction();
+            gameTime++;
+            forward.playerAction();
+            gameTime += 3;
 
         }
 
+    }
+
+    public void coinflip(){
+        int coinflipResult = (int)Math.round(Math.random());
     }
 
 }
