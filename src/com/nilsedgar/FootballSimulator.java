@@ -5,15 +5,11 @@ import java.util.Scanner;
 
 public class FootballSimulator {
 
-    ArrayList<Team> teams = new ArrayList<>();
     int gameTime = 0;
+    Team team = new Team("Madrid");
 
     public FootballSimulator() {
-        Team team = new Team("Madrid");
-        team.players.add(new Goalie("goalie", 1));
-        team.players.add(new Defender("def", 1));
-        team.players.add(new Midfielder("mid", 1));
-        team.players.add(new Forward("forw", 1));
+
     }
 
     public void showMainMenu() {
@@ -48,22 +44,17 @@ public class FootballSimulator {
     }
 
     public void match() {
-
-        Goalie goalie = new Goalie("goalie", 100);
-        Defender defender = new Defender("defender", 100);
-        Midfielder midfielder = new Midfielder("Mid", 100);
-        Forward forward = new Forward("Forward", 100);
         gameTime = 0;
         int score = 0;
 
         while (gameTime < 90) {
-            doPlayerAction(goalie);
+            doPlayerAction(team.players.get(0));
 
-            doPlayerAction(defender);
+            doPlayerAction(team.players.get(1));
 
-            doPlayerAction(midfielder);
+            doPlayerAction(team.players.get(2));
 
-            doPlayerAction(forward);
+            doPlayerAction(team.players.get(3));
             score++;
         }
         System.out.println("The end score: " + score);

@@ -11,6 +11,6 @@ public abstract class Player {
     }
 
 
-    public abstract void playerAction();
+    public abstract boolean playerAction();
 
 }
