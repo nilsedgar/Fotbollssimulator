@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class FootballSimulator {
 
     ArrayList<Team> teams = new ArrayList<>();
+    int gameTime = 0;
 
     public FootballSimulator() {
         Team team = new Team("Madrid");
@@ -15,12 +16,12 @@ public class FootballSimulator {
         team.players.add(new Forward("forw", 1));
     }
 
-    public void showMainMenu(){
+    public void showMainMenu() {
         boolean continueToRun = true;
 
         System.out.println("Welcome. Be prepared for a hyper-realistic simulation of a football-soccerball-game-match!");
 
-        while(continueToRun){
+        while (continueToRun) {
             System.out.println("Make your decision wisely: ");
             System.out.println("1. Choose team");
             System.out.println("2. Start match");
@@ -46,36 +47,37 @@ public class FootballSimulator {
         }
     }
 
-    public void match(){
+    public void match() {
 
         Goalie goalie = new Goalie("goalie", 100);
         Defender defender = new Defender("defender", 100);
         Midfielder midfielder = new Midfielder("Mid", 100);
         Forward forward = new Forward("Forward", 100);
-        int gameTime = 0;
+        gameTime = 0;
         int score = 0;
 
-            while(gameTime < 90){
-            goalie.playerAction();
-            gameTime++;
-            System.out.println("Time passed: " + gameTime);
-            defender.playerAction();
-            gameTime++;
-                System.out.println("Time passed: " + gameTime);
-            midfielder.playerAction();
-            gameTime++;
-                System.out.println("Time passed: " + gameTime);
-            forward.playerAction();
-            gameTime += 3;
+        while (gameTime < 90) {
+            doPlayerAction(goalie);
+
+            doPlayerAction(defender);
+
+            doPlayerAction(midfielder);
+
+            doPlayerAction(forward);
             score++;
-                System.out.println("Time passed: " + gameTime);
         }
         System.out.println("The end score: " + score);
         System.out.println("Runtime: " + gameTime);
 
     }
 
-    public void match2(Team team){
+    private void doPlayerAction(Player player){
+        player.playerAction();
+        gameTime++;
+        System.out.println("Time passed: " + gameTime);
+    }
+
+    public void match2(Team team) {
 
 
     }
