@@ -8,6 +8,7 @@ public class Midfielder extends Player {
 
     public void playerAction(){
         System.out.println("The midfielder passes the ball to the forward.");
+
     }
 
 }

@@ -7,6 +7,14 @@ public class FootballSimulator {
 
     ArrayList<Team> teams = new ArrayList<>();
 
+    public FootballSimulator() {
+        Team team = new Team("Madrid");
+        team.players.add(new Goalie("goalie", 1));
+        team.players.add(new Defender("def", 1));
+        team.players.add(new Midfielder("mid", 1));
+        team.players.add(new Forward("forw", 1));
+    }
+
     public void showMainMenu(){
         boolean continueToRun = true;
 
@@ -67,8 +75,10 @@ public class FootballSimulator {
 
     }
 
-    public void coinflip(){
-        int coinflipResult = (int)Math.round(Math.random());
+    public void match2(Team team){
+
+
     }
 
 }
+

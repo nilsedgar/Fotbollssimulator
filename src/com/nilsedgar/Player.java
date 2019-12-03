@@ -10,6 +10,7 @@ public abstract class Player {
         this.speed = speed;
     }
 
+
     public abstract void playerAction();
 
 }
