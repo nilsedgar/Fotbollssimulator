@@ -8,7 +8,6 @@ public class Forward extends Player {
 
     public void playerAction(){
         System.out.println("The forward takes a shot and scores a goal!");
-
     }
 
 }

@@ -45,18 +45,25 @@ public class FootballSimulator {
         Midfielder midfielder = new Midfielder("Mid", 100);
         Forward forward = new Forward("Forward", 100);
         int gameTime = 0;
+        int score = 0;
 
             while(gameTime < 90){
             goalie.playerAction();
             gameTime++;
+            System.out.println("Time passed: " + gameTime);
             defender.playerAction();
             gameTime++;
+                System.out.println("Time passed: " + gameTime);
             midfielder.playerAction();
             gameTime++;
+                System.out.println("Time passed: " + gameTime);
             forward.playerAction();
             gameTime += 3;
-
+            score++;
+                System.out.println("Time passed: " + gameTime);
         }
+        System.out.println("The end score: " + score);
+        System.out.println("Runtime: " + gameTime);
 
     }
 
